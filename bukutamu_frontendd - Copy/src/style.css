@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Convergence';
+    src: url("font/Convergence-Regular.ttf");
+}
+@font-face {
+    font-family: 'Lakki';
+    src: url("font/LakkiReddy-Regular.ttf");
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url("font/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: 'Kaushan';
+    src: url("font/KaushanScript-Regular.ttf");
+}
+.bg{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    filter: brightness(50%);
+    height: max-content;
+}
+img{
+    width: 250px;
+    height: 80px;
+    margin-top: -40px;
+}
+
+.text{
+    margin-left: 100px;
+    text-align: justify;
+   
+}
+.text h1{
+    margin-top: 80px;
+    font-family: 'Lakki';
+    font-size: 70px;
+    font-weight: 600;
+}
+.text h3{
+    font-family: 'Kaushan';
+    font-size: 30px;
+    margin-top: -30px;
+    font-weight: 400;
+}
+.text p{
+    margin-top: 25px;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 400;
+}
+.content2{
+    opacity: 100%;
+    position: relative;
+    z-index: 3;
+    width: 350px;
+    margin-right: 100px;
+   margin-left: 130px;
+    filter: opacity(100%);
+}
+.content2 input{
+    height: 40px;
+    background: none;
+   
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+::placeholder{
+    color: #fff !important;
+    opacity: 1 !important;
+}
+input:focus{
+    background: none !important;
+    color: #fff !important;
+}
+.judul h3{
+    color: #fff;
+    font-family: 'Convergence';
+    font-size: 35px;
+    text-align: center;
+}
+button{
+    background-color: darkred;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+button:hover{
+    background-color: #8b1111;
+}
+.content{
+    
+    display: grid;
+    align-items: center;
+    gap: 50px;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: -640px;
+    position: relative;
+    z-index: 10;
+   
+}
+
+.bgcontent{
+    position: relative;
+    z-index: 2;
+    margin: 0px 100px 0px 100px;
+    background-color: #000;
+    filter: opacity(100%);
+}
