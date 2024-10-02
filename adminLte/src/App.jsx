@@ -50,8 +50,8 @@ function App() {
         <Routes>
           <Route path="/" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
           <Route path="/users" element={isLoggedIn ? <Users /> : <Navigate to="/login" />} />
-          <Route path="/guestbook" element={isLoggedIn ? <Widgets /> : <Navigate to="/login" />} />
-          <Route path="/addtamu" element={isLoggedIn ? <Addtamu /> : <Navigate to="/login" />} />
+          <Route path="/blog-content" element={isLoggedIn ? <Widgets /> : <Navigate to="/login" />} />
+          <Route path="/addblog" element={isLoggedIn ? <Addtamu /> : <Navigate to="/login" />} />
           <Route path="/addusers" element={isLoggedIn ? <Addusers /> : <Navigate to="/login" />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />

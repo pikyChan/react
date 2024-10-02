@@ -9,20 +9,24 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setError(null); // Reset error before submit
-
+  
     fetch('http://localhost:3000/api/login', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
     })
     .then((response) => {
-        return response.json(); // Ensure this returns the response
+      if (!response.ok) {
+        // Handle non-JSON responses for error cases like 401 (Unauthorized)
+        return response.text().then((text) => { throw new Error(text) });
+      }
+      return response.json(); // Only parse as JSON if the response is OK
     })
     .then((data) => {
-        console.log('Login Response:', data); // Log the response
-
+        console.log('Login Response:', data);
+  
         if (data.auth) {
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('token', data.token); // Save token in localStorage
@@ -33,10 +37,11 @@ const Login = () => {
         }
     })
     .catch((error) => {
-        console.error('Error during login:', error); // Log any errors
+        console.error('Error during login:', error.message); // Log any errors
         setError(error.message);
     });
-};
+  };
+  
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);

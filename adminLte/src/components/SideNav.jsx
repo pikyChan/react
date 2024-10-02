@@ -14,14 +14,7 @@ function SideNav() {
       {/* Sidebar */}
       <div className="sidebar">
         {/* Sidebar user panel (optional) */}
-        <div className="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div className="image">
-            <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
-          </div>
-          <div className="info">
-            <a href="#" className="d-block">Alexander Pierce</a>
-          </div>
-        </div>
+        <br />
         {/* SidebarSearch Form */}
         <div className="form-inline">
           <div className="input-group" data-widget="sidebar-search">
@@ -54,10 +47,10 @@ function SideNav() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/guestbook" className="nav-link" activeClassName="active">
+              <NavLink to="/blog-content" className="nav-link" activeClassName="active">
                 <i className="nav-icon fas fa-th" />
                 <p>
-                  Buku Tamu
+                  Blog Content
                   <span className="right badge badge-danger">New</span>
                 </p>
               </NavLink>

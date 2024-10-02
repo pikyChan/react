@@ -54,7 +54,7 @@ const Addtamu = () => {
 
         const data = await response.json();
         console.log('Response data:', data);
-        navigate('/guestbook');
+        navigate('/blog-content');
     } catch (error) {
         console.error('Error:', error);
         alert('Error creating buku tamu: ' + error.message);

@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .single {
+    @apply flex gap-12; /* 50px gap */
+  
+    .content {
+      @apply flex flex-col gap-8 flex-grow; /* Adjusted gap to 30px equivalent */
+      
+      img {
+        @apply w-full h-72 object-cover; /* Height: 300px */
+      }
+  
+      .user {
+        @apply flex items-center gap-2 text-sm; /* Font size: 14px */
+  
+        img {
+          @apply w-12 h-12 rounded-full object-cover; /* 50px by 50px */
+        }
+  
+        span {
+          @apply font-bold;
+        }
+      }
+  
+      .edit {
+        @apply flex gap-1; /* Adjust gap to match original style */
+  
+        img {
+          @apply w-5 h-5 cursor-pointer; /* 20px by 20px */
+        }
+      }
+  
+      h1 {
+        @apply text-4xl text-gray-800; /* Font size: 42px, color: #333 */
+      }
+  
+      p {
+        @apply text-justify leading-7; /* Line height: 30px */
+      }
+    }
+  
+    .menu {
+      @apply flex flex-col gap-6 flex-grow-0; /* Adjusted gap to 25px equivalent */
+  
+      h1 {
+        @apply text-xl text-gray-600; /* Font size: 20px, color: #555 */
+      }
+  
+      .post {
+        @apply flex flex-col gap-2; /* Adjusted gap to 10px equivalent */
+  
+        img {
+          @apply w-full h-52 object-cover; /* Height: 200px */
+        }
+  
+        h2 {
+          @apply text-gray-600; /* Color: #555 */
+        }
+  
+        button {
+          @apply max-w-max py-2 px-4 border border-teal-500 bg-white text-teal-500 cursor-pointer;
+  
+          &:hover {
+            @apply border-white bg-teal-100 text-black; /* Hover effect with light green background */
+          }
+        }
+      }
+    }
+  }
+
+  .homeBannerSection .item img{
+    height: 400px;
+    width: 100%;
+    margin: 0px  ;
+    border-radius: 15px;
+    border: none;
+  }
+  
+  .homeBannerSection {
+    position: relative;
+    overflow: hidden;
+  }
+  .homeBannerSection *{
+    outline: none !important;
+  }
+  .homeBannerSection .slick-arrow {
+    position: absolute;
+    top: 45%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 40px !important ;
+    background: #444444;
+    border-radius: 100%;
+    font-size: 30px;
+  }
+  .homeBannerSection .slick-arrow.slick-next{
+    right: 30px !important;
+  }
+  .homeBannerSection .slick-arrow.slick-prev{
+    left: 30px !important;
+  }
+  .homeBannerSection .slick-arrow.slick-next::before{ 
+    font-family: FontAwesome !important;
+    color: #fff;
+  }
+  .homeBannerSection .slick-arrow.slick-prev::before{
+    font-family: FontAwesome !important;
+    color: #fff;
+  }
+
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+ 
+  .content {
+    flex: 1;  
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+
+  footer {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
